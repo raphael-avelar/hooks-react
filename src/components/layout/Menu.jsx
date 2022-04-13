@@ -4,7 +4,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Menu = props => (
-  <aside className="Menu">
+  <aside className="menu">
     <nav>
       <ul>
         <li>
