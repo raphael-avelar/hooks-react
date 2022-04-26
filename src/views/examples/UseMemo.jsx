@@ -4,8 +4,8 @@ import PageTitle from '../../components/layout/PageTitle'
 import SectionTitle from '../../components/layout/SectionTitle'
 
 const sum = (a, b) => {
-  const future = Date.now() + 2000
-  while (Date.now() < future) { } // Espera... 2s
+  const future = Date.now() + 1000
+  while (Date.now() < future) { } // Espera... 1s
 
   return a + b
 }
