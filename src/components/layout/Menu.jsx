@@ -1,45 +1,42 @@
 import './Menu.css'
 import React from 'react'
 
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
-const Menu = props => (
-  <aside className="menu">
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Início</Link>
-        </li>
-        <li>
-          <Link to="/param/123">Route Parâmetro</Link>
-        </li>
-        <li>
-          <Link to="/useState">useState()</Link>
-        </li>
-        <li>
-          <Link to="/useEffect">useEffect()</Link>
-        </li>
-        <li>
-          <Link to="/useRef">useRef()</Link>
-        </li>
-        <li>
-          <Link to="/useMemo">useMemo()</Link>
-        </li>
-        <li>
-          <Link to="/useCallback">useCallback()</Link>
-        </li>
-        <li>
-          <Link to="/useContext">useContext()</Link>
-        </li>
-        <li>
-          <Link to="/useReducer">useReducer()</Link>
-        </li>
-        <li>
-          <Link to="/useCustom">useMyHook()</Link>
-        </li>
-      </ul>
-    </nav>
-  </aside>
-)
+const itemsMenu = [
+  { path: '/', label: 'Início' },
+  { path: '/param/123', label: 'Route Parâmetro' },
+  { path: '/useState', label: 'useState()' },
+  { path: '/useEffect', label: 'useEffect()' },
+  { path: '/useRef', label: 'useRef()' },
+  { path: '/useMemo', label: 'useMemo()' },
+  { path: '/useCallback', label: 'useCallback()' },
+  { path: '/useContext', label: 'useContext()' },
+  { path: '/useReducer', label: 'useReducer()' },
+  { path: '/useCustom', label: 'useCustom()' }
+]
+
+const Menu = props => {
+  const currentPathRoute = useLocation().pathname
+
+  return (
+    <aside className="menu">
+      <nav>
+        <ul>
+          {itemsMenu.map(item => (
+            <li key={item.label}>
+              <Link
+                to={item.path}
+                className={currentPathRoute === item.path ? 'active' : ''}
+              >
+                {item.label}
+              </Link>  
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </aside>
+  )
+}
 
 export default Menu
