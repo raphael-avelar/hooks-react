@@ -1,16 +1,38 @@
-# Getting Started with Create React App
+<h1 align="center">Hooks React</h1>
 
-### Start the app in development mode. Open (http://localhost:3000) to view it in your browser.
+<p align="center">
+Projeto pessoal destinado para desenvolver/aperfeiçoar as skills técnicas em React.
+</p>
+
+<br>
+
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- JavaScript
+- ReactJs
+- HTML/CSS
+
+## 💻 Projeto
+
+O projeto foi desenvolvido com objetivo de treinar/aprender alguns dos principais hooks do React.
+
+<br>
+
+## ⚙ Construindo aplicação
+
+### Install the dependencies
+```bash
+npm install
+```
+
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
 ```bash
 npm run start
 ```
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Build the app for production
+```bash
+npm run build
+```
